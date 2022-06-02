@@ -54,7 +54,7 @@ def get_cli_args():
     )
     parser.add_argument(
         'sources', action='store', nargs='*', default='',
-        choices=sorted(source_classes.keys() + ['']),
+        choices=sorted(list(source_classes) + ['']),
         help='source names' if wrapper is None else argparse.SUPPRESS
     )
 

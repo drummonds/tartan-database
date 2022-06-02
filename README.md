@@ -1,5 +1,10 @@
 # Tartan threadcounts from different sources
 
+This is forked from https://github.com/thetartan/tartan-database.
+I am aiming to make it work on Python 3 and on Windows.  I also want to explore
+creating tartan images.
+I have also moved from bash files to fabric files.
+
 ## Sources
 
 - Weddslist (http://www.weddslist.com/tartans/links.html) - 
@@ -19,7 +24,9 @@ running any of processing scripts.
 
 ## Requirements
 
-- Python 2.7;
+See requirements.txt
+
+- Python 3;
 - `requests` library (version 2.9.1 properly works with TLSv1; 
 newer versions are somehow broken);
 - `Pillow` library (for Scottish Tartans Authority).

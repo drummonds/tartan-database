@@ -1,6 +1,6 @@
 import csv
 import sys
-import utils
+from . import utils
 
 
 class Writer:

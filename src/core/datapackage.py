@@ -2,7 +2,7 @@ import ntpath
 import re
 import os
 import csv
-import utils
+from . import utils
 
 
 def get_csv_headers(filename):
@@ -60,17 +60,14 @@ def create_resource(datafile, **kwargs):
         'bytes': os.stat(datafile).st_size,
         'countOfRecords': get_csv_records_count(datafile),
         'schema': {
-            'fields': map(
-                lambda (index, row): {
+            'fields': [{
                     'name': row[0],
                     'title': row[1],
                     'type':
                         headers[index][2] if len(headers[index]) > 2
                         else 'string',
                     'format': 'default'
-                },
-                enumerate(headers)
-            )
+                } for (index, row) in enumerate(headers)],
         }
     }
 

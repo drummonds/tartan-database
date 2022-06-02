@@ -98,18 +98,20 @@ re_extract_threadcount = re.compile(
 
 
 def parse_attributes(data):
-    result = dict(filter(
-        lambda (key, value): key != '',
-        map(
-            lambda (key, value): (
-                attr_map[
-                    utils.cleanup(key.strip().strip(':'))
-                ] if key != '' else '',
-                utils.cleanup(value)
-            ),
-            re_extract_attr.findall(data)
-        )
-    ))
+    # TODO
+    result = None
+    # result = dict(filter(
+    #     lambda (key, value): key != '',
+    #     map(
+    #         lambda (key, value): (
+    #             attr_map[
+    #                 utils.cleanup(key.strip().strip(':'))
+    #             ] if key != '' else '',
+    #             utils.cleanup(value)
+    #         ),
+    #         re_extract_attr.findall(data)
+    #     )
+    # ))
 
     result['category'] = utils.parse_category(result.get('category', ''))
     if result['category'] == '':
@@ -481,7 +483,7 @@ class RegisterOfTartans(Source):
         result = parse_attributes(data)
 
         if 'ref' in result:
-            print item, result
+            print(item, result)
             exit()
 
         result['origin_id'] = str(item)

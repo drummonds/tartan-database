@@ -3,7 +3,7 @@ import random
 import string
 from datetime import datetime
 from PIL import ImageColor
-from HTMLParser import HTMLParser
+from html.parser import HTMLParser
 
 html = HTMLParser()
 

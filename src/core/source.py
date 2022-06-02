@@ -1,10 +1,10 @@
 import os
 import sys
 import json
-import log
-import csvfile as csv
-import datapackage
-import utils
+from . import log
+from . import csvfile as csv
+from . import datapackage
+from . import utils
 
 __dir__ = os.path.dirname(os.path.abspath(__file__))
 

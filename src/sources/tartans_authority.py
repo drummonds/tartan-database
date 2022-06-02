@@ -94,26 +94,28 @@ def normalize_threadcount(value, reflect=False):
 
 
 def parse_metadata(data):
-    result = map(
-        lambda (key, value): (
-            attr_map[key],
-            utils.cleanup(value)
-        ),
-        filter(
-            lambda (key, value): key != '',
-            map(
-                lambda (key, value): (
-                    utils.cleanup(key.strip().strip(':')),
-                    value
-                ),
-                re_extract_attr.findall(data)
-            )
-        )
-    )
-    result = filter(
-        lambda (key, value): key is not None,
-        result
-    )
+    # TODO
+    result = None
+    # result = map(
+    #     lambda (key, value): (
+    #         attr_map[key],
+    #         utils.cleanup(value)
+    #     ),
+    #     filter(
+    #         lambda (key, value): key != '',
+    #         map(
+    #             lambda (key, value): (
+    #                 utils.cleanup(key.strip().strip(':')),
+    #                 value
+    #             ),
+    #             re_extract_attr.findall(data)
+    #         )
+    #     )
+    # )
+    # result = filter(
+    #     lambda (key, value): key is not None,
+    #     result
+    # )
     result = dict(result)
 
     result['category'] = utils.parse_category(result.get('category', ''))
@@ -343,9 +345,8 @@ class TartansAuthority(Source):
             temp[key] = temp.get(key, {})
             temp[key][palette[key]] = temp[key].get(palette[key], 0) + 1
 
-        result['palette'] = ' '.join(map(
-            lambda (key, value): key + value + ';',
-            dict(palette).items()
-        ))
+        result['palette'] = ' '.join(
+            [key + value + ';' for key, value in dict(palette).items()])
+
 
         return [result]

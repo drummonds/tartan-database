@@ -1,4 +1,4 @@
-from ..core import Source, log, utils
+from src.core import Source, log, utils
 import re
 import requests
 
