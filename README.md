@@ -68,5 +68,14 @@ compress them and store archive - since grabbed data is usually very similar
 reduce data size 10 and more times.
 
 To save raw grabbed files after running grabbers, you can use `stg` script:
-`./stg pack` - pack `storage` folder, `./stg unpack` - restore previously 
+`./stg pack` - pack `storage` folder, `./stg unpack` - restore previously
 packed files.
+
+## Links
+
+| | |
+|---|---|
+| Documentation | https://h3-tartan-database.statichost.page/ |
+| Source (Codeberg) | https://codeberg.org/hum3/tartan-database |
+| Mirror (GitHub) | https://github.com/drummonds/tartan-database |
+| Docs repo | https://codeberg.org/hum3/tartan-database-docs |
