@@ -3,3 +3,5 @@
 *.pyc
 storage
 temp
+# task-plus private local config (symlink to replicated copy)
+task-plus.local.yaml
