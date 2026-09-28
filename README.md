@@ -75,7 +75,6 @@ packed files.
 
 | | |
 |---|---|
-| Documentation | https://h3-tartan-database.statichost.page/ |
 | Source (Codeberg) | https://codeberg.org/hum3/tartan-database |
 | Mirror (GitHub) | https://github.com/drummonds/tartan-database |
 | Docs repo | https://codeberg.org/hum3/tartan-database-docs |
